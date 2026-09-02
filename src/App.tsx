@@ -1232,7 +1232,7 @@ export default function App() {
           🐙 Repo
         </a>
         {/* PRESENTACION: cambiá este href por la URL final de la presentación cuando esté lista */}
-        <a href="https://github.com/annatchijova/pichon/tree/main/deck" target="_blank" rel="noopener noreferrer" className="text-center bg-stone-800 text-stone-100 font-bold text-base px-6 py-4 rounded-2xl border border-stone-700 hover:border-amber-500/60 hover:text-amber-300 transition-all">
+        <a href="/presentacion.pdf" target="_blank" rel="noopener noreferrer" className="text-center bg-stone-800 text-stone-100 font-bold text-base px-6 py-4 rounded-2xl border border-stone-700 hover:border-amber-500/60 hover:text-amber-300 transition-all">
           📊 Presentación
         </a>
       </nav>
@@ -2158,7 +2158,7 @@ export default function App() {
         <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mb-3">
           <a href="https://github.com/annatchijova/pichon" target="_blank" rel="noopener noreferrer" className="text-amber-400 font-medium hover:underline">🐙 Repo</a>
           {/* PRESENTACION: apuntá esto a la URL final cuando la presentación esté lista */}
-          <a href="https://github.com/annatchijova/pichon/tree/main/deck" target="_blank" rel="noopener noreferrer" className="text-amber-400 font-medium hover:underline">📊 Presentación</a>
+          <a href="/presentacion.pdf" target="_blank" rel="noopener noreferrer" className="text-amber-400 font-medium hover:underline">📊 Presentación</a>
           <a href="/juego.html" className="text-amber-400 font-medium hover:underline">🎯 ¿Espía o no espía?</a>
         </p>
         <p className="flex items-center justify-center gap-2">
