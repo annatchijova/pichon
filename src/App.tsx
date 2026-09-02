@@ -2171,6 +2171,11 @@ export default function App() {
           <span>•</span>
           <span className="text-amber-400 font-medium">Textos con Auto-Centrado Inteligente</span>
         </p>
+        <p className="mt-3 text-[10px] text-stone-600">
+          <a href="/curso-ru.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-stone-400 hover:underline">🇷🇺 Версия на русском</a>
+          <span className="mx-2 opacity-50">·</span>
+          <span>traducción no disponible por motivos operativos</span>
+        </p>
       </footer>
     </div>
   );
