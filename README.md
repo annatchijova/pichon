@@ -16,6 +16,9 @@ Dos piezas, un solo deploy:
 | `/` | **Is This a Spy?** — galería + **editor** de 24 memes de ciberseguridad y espionaje (React + Vite). **Cada participante puede PERSONALIZAR el texto y el estilo de cada meme y DESCARGARLO** en 1:1, sin marcas de agua. ¡Hacé el tuyo! |
 | `/juego.html` | **¿Espía o no espía?** — test de aptitud paranoica: mirá al sujeto, decidí ESPÍA / NO ESPÍA. Juego standalone (un solo HTML, cero dependencias). |
 
+
+**PICHÓN es el organismo estatal que prueba, con un motor lógico real (MaxSAT), que las palomas son espías — y que nadie puede refutarlo. El público vota si un sujeto (paloma, cucaracha, cuervo, gato) es agente encubierto; la Doctrina Oficial siempre tiene explicación, aunque para sostenerla haya que sacrificar un hecho verdadero. Incluye un test que el público se lleva en el celular y una galería de memes personalizables. Presenta una Directora de Negación Oficial junto a un doble agente que solo habla ruso, mordido por una paloma en Siberia.**
+
 ## Correr local
 
 ```bash
