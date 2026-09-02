@@ -1191,7 +1191,7 @@ export default function App() {
               </span>
             </h1>
             <p className="text-xs text-stone-400">
-              Ilustraciones maestras en formato 1:1, limpias y sin marcas de agua incrustadas
+              Personalizá el texto y el estilo de cada meme y descargalo — 1:1, sin marcas de agua. ¡Hacé el tuyo!
             </p>
           </div>
         </div>
@@ -1222,6 +1222,20 @@ export default function App() {
           </button>
         </div>
       </header>
+
+      {/* Barra de enlaces destacada (arriba, grande) */}
+      <nav className="w-full max-w-5xl z-10 -mt-2 mb-6 flex flex-col sm:flex-row items-stretch gap-3">
+        <a href="/juego.html" className="flex-1 text-center bg-amber-500 text-stone-950 font-extrabold text-lg px-6 py-4 rounded-2xl hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/25">
+          🎯 Jugá: ¿Espía o no espía?
+        </a>
+        <a href="https://github.com/annatchijova/pichon" target="_blank" rel="noopener noreferrer" className="text-center bg-stone-800 text-stone-100 font-bold text-base px-6 py-4 rounded-2xl border border-stone-700 hover:border-amber-500/60 hover:text-amber-300 transition-all">
+          🐙 Repo
+        </a>
+        {/* PRESENTACION: cambiá este href por la URL final de la presentación cuando esté lista */}
+        <a href="https://github.com/annatchijova/pichon/tree/main/deck" target="_blank" rel="noopener noreferrer" className="text-center bg-stone-800 text-stone-100 font-bold text-base px-6 py-4 rounded-2xl border border-stone-700 hover:border-amber-500/60 hover:text-amber-300 transition-all">
+          📊 Presentación
+        </a>
+      </nav>
 
       {/* VISTA 1: Galería Individual y Editor de Memes */}
       {activeTab === 'individual' && (

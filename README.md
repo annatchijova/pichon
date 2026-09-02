@@ -2,11 +2,18 @@
 
 > *Los pájaros no son reales.* Proyecto del anti-hackathon presencial de teorías conspirativas.
 
+## 🔗 En vivo
+
+- 🖼️ **Galería / editor de memes:** https://pichon-anna-tchijova.vercel.app/
+- 🎯 **Juego "¿Espía o no espía?":** https://pichon-anna-tchijova.vercel.app/juego.html
+- 🐙 **Repo:** https://github.com/annatchijova/pichon
+- 📊 **Presentación:** [deck/](deck/) *(se reemplaza por la URL final cuando esté lista)*
+
 Dos piezas, un solo deploy:
 
 | Ruta | Qué es |
 |---|---|
-| `/` | **Is This a Spy?** — editor/galería de 24 memes de ciberseguridad y espionaje (React + Vite). |
+| `/` | **Is This a Spy?** — galería + **editor** de 24 memes de ciberseguridad y espionaje (React + Vite). **Cada participante puede PERSONALIZAR el texto y el estilo de cada meme y DESCARGARLO** en 1:1, sin marcas de agua. ¡Hacé el tuyo! |
 | `/juego.html` | **¿Espía o no espía?** — test de aptitud paranoica: mirá al sujeto, decidí ESPÍA / NO ESPÍA. Juego standalone (un solo HTML, cero dependencias). |
 
 ## Correr local
