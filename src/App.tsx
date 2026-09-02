@@ -1231,9 +1231,12 @@ export default function App() {
         <a href="https://github.com/annatchijova/pichon" target="_blank" rel="noopener noreferrer" className="text-center bg-stone-800 text-stone-100 font-bold text-base px-6 py-4 rounded-2xl border border-stone-700 hover:border-amber-500/60 hover:text-amber-300 transition-all">
           🐙 Repo
         </a>
-        {/* PRESENTACION: cambiá este href por la URL final de la presentación cuando esté lista */}
-        <a href="/presentacion.pdf" target="_blank" rel="noopener noreferrer" className="text-center bg-stone-800 text-stone-100 font-bold text-base px-6 py-4 rounded-2xl border border-stone-700 hover:border-amber-500/60 hover:text-amber-300 transition-all">
+        {/* Dos presentaciones. Nadie explica por qué hay dos. */}
+        <a href="/curso.pdf" target="_blank" rel="noopener noreferrer" title="Curso de identificación de espías · Nivel 1" className="text-center bg-stone-800 text-stone-100 font-bold text-base px-6 py-4 rounded-2xl border border-stone-700 hover:border-amber-500/60 hover:text-amber-300 transition-all">
           📊 Presentación
+        </a>
+        <a href="/presentacion.pdf" target="_blank" rel="noopener noreferrer" title="Expediente PICHÓN · la presentación original, 32 páginas" className="text-center bg-stone-800 text-stone-100 font-bold text-base px-6 py-4 rounded-2xl border border-stone-700 hover:border-amber-500/60 hover:text-amber-300 transition-all">
+          🗄️ Expediente original
         </a>
       </nav>
 
@@ -2157,8 +2160,8 @@ export default function App() {
       <footer className="w-full max-w-5xl text-center text-xs text-stone-400 pt-6 mt-6 border-t border-stone-800/80">
         <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mb-3">
           <a href="https://github.com/annatchijova/pichon" target="_blank" rel="noopener noreferrer" className="text-amber-400 font-medium hover:underline">🐙 Repo</a>
-          {/* PRESENTACION: apuntá esto a la URL final cuando la presentación esté lista */}
-          <a href="/presentacion.pdf" target="_blank" rel="noopener noreferrer" className="text-amber-400 font-medium hover:underline">📊 Presentación</a>
+          <a href="/curso.pdf" target="_blank" rel="noopener noreferrer" className="text-amber-400 font-medium hover:underline">📊 Presentación</a>
+          <a href="/presentacion.pdf" target="_blank" rel="noopener noreferrer" className="text-amber-400 font-medium hover:underline">🗄️ Expediente original</a>
           <a href="/juego.html" className="text-amber-400 font-medium hover:underline">🎯 ¿Espía o no espía?</a>
         </p>
         <p className="flex items-center justify-center gap-2">
