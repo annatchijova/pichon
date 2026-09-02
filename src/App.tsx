@@ -2141,6 +2141,12 @@ export default function App() {
 
       {/* Pie de página */}
       <footer className="w-full max-w-5xl text-center text-xs text-stone-400 pt-6 mt-6 border-t border-stone-800/80">
+        <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mb-3">
+          <a href="https://github.com/annatchijova/pichon" target="_blank" rel="noopener noreferrer" className="text-amber-400 font-medium hover:underline">🐙 Repo</a>
+          {/* PRESENTACION: apuntá esto a la URL final cuando la presentación esté lista */}
+          <a href="https://github.com/annatchijova/pichon/tree/main/deck" target="_blank" rel="noopener noreferrer" className="text-amber-400 font-medium hover:underline">📊 Presentación</a>
+          <a href="/juego.html" className="text-amber-400 font-medium hover:underline">🎯 ¿Espía o no espía?</a>
+        </p>
         <p className="flex items-center justify-center gap-2">
           <span>Saga de Memes & Conspiración</span>
           <span>•</span>
