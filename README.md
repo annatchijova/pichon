@@ -7,7 +7,8 @@
 - 🖼️ **Galería / editor de memes:** https://pichon-anna-tchijova.vercel.app/
 - 🎯 **Juego "¿Espía o no espía?":** https://pichon-anna-tchijova.vercel.app/juego.html
 - 🐙 **Repo:** https://github.com/annatchijova/pichon
-- 📊 **Presentación:** https://pichon-anna-tchijova.vercel.app/presentacion.pdf
+- 📊 **Presentación (Curso de identificación de espías):** https://pichon-anna-tchijova.vercel.app/curso.pdf
+- 🗄️ **Expediente original (32 páginas):** https://pichon-anna-tchijova.vercel.app/presentacion.pdf
 
 Dos piezas, un solo deploy:
 
