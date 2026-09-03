@@ -20,7 +20,7 @@ Coo coo **Coo-coo — Coorrr Coo** (Coo Coo, 2026). Coo coo coo coo coo coo coo 
 - **Coo coo coo coo** — https://pichon-anna-tchijova.vercel.app/universo.html
 - **Coo «Coo? Coo coo?»** — https://pichon-anna-tchijova.vercel.app/juego.html
 - **Coo coo coo** (coo, PNG) — https://pichon-anna-tchijova.vercel.app/certificado.html
-- **Coo coo coo cooo** — https://pichon-anna-tchijova.vercel.app/
+- **Coo coo coo cooo** — https://pichon-anna-tchijova.vercel.app/galeria
 - **Coo Coo Coo Cooo** (PDF, 27 coo) — https://pichon-anna-tchijova.vercel.app/curso.pdf
 - **Курс по выявлению шпионов** — coo coo, coo coo-coo coo ██ — https://pichon-anna-tchijova.vercel.app/curso-ru.pdf
 - **Coo Coooo** — 32 coo — https://pichon-anna-tchijova.vercel.app/presentacion.pdf
@@ -50,8 +50,8 @@ Coo coo, coo coo, coo coo:
 
 | Coo | Coo coo | Coo |
 |---|---|---|
-| `/` | **Is This a Spy?** — coo coo 26 coo. Coo coo coo, coo, coo, coo, coo PNG 1:1, coo coo. | React + Vite |
-| `/universo.html` | **Coo coo** — coo coo coo coo coo coo coo, coo coo coo. Coo coo coo coo. | Coo HTML + coo JS, coo coo |
+| `/galeria` | **Is This a Spy?** — coo coo 26 coo. Coo coo coo, coo, coo, coo, coo PNG 1:1, coo coo. | React + Vite |
+| `/` · `/universo.html` | **Coo coo** — coo coo coo coo coo coo coo, coo coo coo. Coo coo coo coo. **Coo coo coo** (coo `/`, coo coo QR). | Coo HTML + coo JS, coo coo |
 | `/juego.html` | **Coo? Coo coo?** — coo coo. Coo coo, coo coo, coo. Coo Coo coo coo. | Coo HTML + coo JS, coo coo |
 | `/certificado.html` | **Coo coo coo** — coo coo coo: coo, coo coo, coo. Coo PNG 1:1. | Coo HTML + Canvas, coo coo |
 | `/curso.pdf` | Coo coo | pptxgenjs |

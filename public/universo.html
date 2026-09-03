@@ -141,6 +141,29 @@ footer .black{margin-top:34px;background:#000;border:1px solid var(--line);borde
 footer .black .b-txt{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;color:#3a3f47}
 footer .links{margin-top:26px;font-family:var(--font-mono);font-size:12px;letter-spacing:.1em}
 
+/* ---------- the Siberian (Dahgoth) flaps and says КУ ---------- */
+.sib{margin-top:44px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.sib-bird{position:relative;width:66px;height:44px;animation:sib-fly 3.2s ease-in-out infinite}
+.sib-bird .body{position:absolute;left:23px;top:14px;width:20px;height:16px;background:var(--chalk);
+  border-radius:60% 60% 55% 55%;box-shadow:0 0 0 1px var(--line)}
+.sib-bird .body::after{content:"";position:absolute;right:-6px;top:5px;
+  border-left:7px solid var(--papaya);border-top:3px solid transparent;border-bottom:3px solid transparent}
+.sib-bird .wing{position:absolute;top:9px;width:27px;height:10px;background:var(--chalk);border-radius:50% / 80%}
+.sib-bird .wing.left{left:0;transform-origin:100% 50%;animation:flap-l .34s ease-in-out infinite alternate}
+.sib-bird .wing.right{right:0;transform-origin:0% 50%;animation:flap-r .34s ease-in-out infinite alternate}
+@keyframes flap-l{from{transform:rotate(20deg)}to{transform:rotate(-44deg)}}
+@keyframes flap-r{from{transform:rotate(-20deg)}to{transform:rotate(44deg)}}
+@keyframes sib-fly{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+.sib .ku{font-family:var(--font-display);font-size:28px;letter-spacing:.12em;color:var(--gold);
+  opacity:0;animation:ku-say 3.2s ease-in-out infinite}
+@keyframes ku-say{0%,58%{opacity:0;transform:translateY(5px) scale(.9)}
+  70%,86%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0}}
+.sib .sib-cap{font-family:var(--font-mono);font-size:10px;letter-spacing:.28em;color:#3a3f47}
+@media (prefers-reduced-motion:reduce){
+  .sib-bird,.sib-bird .wing,.sib .ku{animation:none}
+  .sib .ku{opacity:1}
+}
+
 /* ---------- big buttons (copied from the gallery: big, bold, high-contrast) ---------- */
 .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
 .cta{font-family:var(--font-body);font-size:18px;letter-spacing:.005em;font-weight:800;
@@ -206,7 +229,7 @@ figure.ev figcaption::before{content:"● REC · ";color:var(--brake)}
     <div class="filestrip mono" data-i18n="hero_file">EXPEDIENTE 8821-C/26 · COPIA NO CONTROLADA · VERIFICADO POR TRES PALOMAS</div>
 
     <div class="cta-row">
-      <a class="cta primary" href="/" data-i18n="cta_gallery">Galería de memes</a>
+      <a class="cta primary" href="/galeria" data-i18n="cta_gallery">Galería de memes</a>
       <a class="cta gold" href="/juego.html" data-i18n="cta_game">¿Espía o no espía?</a>
       <a class="cta primary" href="/certificado.html" data-i18n="cta_cert">Certificado editable</a>
       <a class="cta" href="/curso.pdf" target="_blank" rel="noopener" data-i18n="cta_curso">Curso (PDF)</a>
@@ -272,8 +295,13 @@ figure.ev figcaption::before{content:"● REC · ";color:var(--brake)}
     <div class="fin" data-i18n="fin">FIN DE LA TRANSMISIÓN</div>
     <div class="foot-mono" data-i18n="foot">DIRECCIÓN DE AVES · 2026 → ∞ · SI ESTE DOCUMENTO LLEGÓ A USTED, ESTÁ SIENDO VIGILADO</div>
     <div class="black"><div class="b-txt" data-i18n="black">LA ÚLTIMA PÁGINA FUE RETIRADA POR LAS PALOMAS.</div></div>
+    <div class="sib" aria-hidden="true" title="Dahgoth · КИБЕРСТРАННИК">
+      <div class="sib-bird"><span class="wing left"></span><span class="wing right"></span><span class="body"></span></div>
+      <div class="ku">КУ</div>
+      <div class="sib-cap" data-i18n="sib_cap">EL SIBERIANO ALETEA</div>
+    </div>
     <div class="links">
-      <a href="/" data-i18n="link_home">← Galería</a> ·
+      <a href="/galeria" data-i18n="link_home">← Galería</a> ·
       <a href="/juego.html" data-i18n="link_game">¿Espía o no espía?</a>
     </div>
   </footer>

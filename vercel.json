@@ -3,6 +3,10 @@
   "installCommand": "npm ci",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/", "destination": "/universo.html" },
+    { "source": "/galeria", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

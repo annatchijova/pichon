@@ -28,7 +28,7 @@
       fin: "FIN DE LA TRANSMISIÓN",
       foot: "DIRECCIÓN DE AVES · 2026 → ∞ · SI ESTE DOCUMENTO LLEGÓ A USTED, ESTÁ SIENDO VIGILADO",
       black: "LA ÚLTIMA PÁGINA FUE RETIRADA POR LAS PALOMAS.",
-      link_home: "← Galería", link_game: "¿Espía o no espía?"
+      link_home: "← Galería", link_game: "¿Espía o no espía?", sib_cap: "EL SIBERIANO ALETEA"
     },
     en: {
       ent_org: "DIRECTORATE OF BIRDS · restricted access",
@@ -54,7 +54,7 @@
       fin: "END OF TRANSMISSION",
       foot: "DIRECTORATE OF BIRDS · 2026 → ∞ · IF THIS DOCUMENT REACHED YOU, YOU ARE BEING WATCHED",
       black: "THE LAST PAGE WAS REMOVED BY THE PIGEONS.",
-      link_home: "← Gallery", link_game: "Spy or not spy?"
+      link_home: "← Gallery", link_game: "Spy or not spy?", sib_cap: "THE SIBERIAN FLAPS"
     },
     ru: {
       ent_org: "ДИРЕКЦИЯ ПТИЦ · доступ ограничен",
@@ -80,7 +80,7 @@
       fin: "КОНЕЦ ПЕРЕДАЧИ",
       foot: "ДИРЕКЦИЯ ПТИЦ · 2026 → ∞ · ЕСЛИ ЭТОТ ДОКУМЕНТ ДОШЁЛ ДО ВАС, ЗА ВАМИ НАБЛЮДАЮТ",
       black: "ПОСЛЕДНЯЯ СТРАНИЦА БЫЛА ИЗЪЯТА ГОЛУБЯМИ.",
-      link_home: "← Галерея", link_game: "Шпион или не шпион?"
+      link_home: "← Галерея", link_game: "Шпион или не шпион?", sib_cap: "СИБИРЯК МАШЕТ КРЫЛЬЯМИ"
     },
     paloma: {
       ent_org: "COO COO · coo coo coo",
@@ -106,7 +106,7 @@
       fin: "COO COO COO",
       foot: "COO COO · 2026 → ∞ · COO COO COO COO COO, COO COO COO COO",
       black: "COO COO COO COO COO COO COO.",
-      link_home: "← Coo", link_game: "¿Coo coo coo?"
+      link_home: "← Coo", link_game: "¿Coo coo coo?", sib_cap: "COO COO COO"
     }
   };
 

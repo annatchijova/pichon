@@ -364,7 +364,7 @@ function renderStatic(){
   $("restart").textContent=t.restart;
   $("footerTop").textContent=t.footerTop;
   $("galleryLink").textContent=t.gallery;
-  $("galleryLink").href = "/"+(CURR.lang==="es"?"":"?lang="+CURR.lang);
+  $("galleryLink").href = "/galeria"+(CURR.lang==="es"?"":"?lang="+CURR.lang);
   $("fRu").textContent=t.ruNote;
   $("opNote").textContent=t.opNote;
   $("fRepo").textContent="🐙 "+t.footerRepo;

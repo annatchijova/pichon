@@ -16,7 +16,7 @@ Proyecto presentado en **SideQuest — Conspiracy Edition**, el anti-hackathon d
 - **Archivo cinematográfico y reglas del universo** — https://pichon-anna-tchijova.vercel.app/universo.html
 - **Juego «¿Espía o no espía?»** — https://pichon-anna-tchijova.vercel.app/juego.html
 - **Certificado de aprobación** (editable, descargable en PNG) — https://pichon-anna-tchijova.vercel.app/certificado.html
-- **Galería y editor de memes** — https://pichon-anna-tchijova.vercel.app/
+- **Galería y editor de memes** — https://pichon-anna-tchijova.vercel.app/galeria
 - **Curso de Identificación de Espías** (PDF, 27 páginas) — https://pichon-anna-tchijova.vercel.app/curso.pdf
 - **Курс по выявлению шпионов** — versión rusa, sin traducción por motivos operativos — https://pichon-anna-tchijova.vercel.app/curso-ru.pdf
 - **Expediente original** — la presentación de PICHÓN, 32 páginas — https://pichon-anna-tchijova.vercel.app/presentacion.pdf
@@ -46,8 +46,8 @@ El universo tiene, por ahora, dos capítulos:
 
 | Ruta | Qué es | Stack |
 |---|---|---|
-| `/` | **Is This a Spy?** — galería y editor de 26 memes de espionaje aviar. Cada persona personaliza el subtítulo, la tipografía, la posición y el tamaño, y descarga su PNG en 1:1, sin marca de agua. | React + Vite |
-| `/universo.html` | **Archivo cinematográfico** — el canon de películas del universo y las reglas de la doctrina, en cuatro idiomas. Estética de expediente desclasificado. | HTML + JS local, cero dependencias externas |
+| `/galeria` | **Is This a Spy?** — galería y editor de 26 memes de espionaje aviar. Cada persona personaliza el subtítulo, la tipografía, la posición y el tamaño, y descarga su PNG en 1:1, sin marca de agua. | React + Vite |
+| `/` · `/universo.html` | **Archivo cinematográfico** — el canon de películas del universo y las reglas de la doctrina, en cuatro idiomas. Estética de expediente desclasificado. **Es la portada del sitio** (la raíz `/`, a donde apunta el QR de las diapositivas). | HTML + JS local, cero dependencias externas |
 | `/juego.html` | **¿Espía o no espía?** — test de aptitud paranoica. Ocho sujetos, evidencia observada, votás. La Doctrina Oficial dicta el veredicto. | HTML + JS local, cero dependencias externas |
 | `/certificado.html` | **Certificado de aprobación** — generador editable: nombre, color de pantalón (nivel de acceso), especialidad. Descarga en PNG 1:1. | HTML + Canvas, cero dependencias externas |
 | `/curso.pdf` | La clase, con notas de escena en el `.pptx` de `deck/` | pptxgenjs |
