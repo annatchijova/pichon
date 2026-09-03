@@ -49,7 +49,7 @@ Coo coo, coo coo, coo coo:
 | Coo | Coo coo | Coo |
 |---|---|---|
 | `/` | **Is This a Spy?** — coo coo 26 coo. Coo coo coo, coo, coo, coo, coo PNG 1:1, coo coo. | React + Vite |
-| `/juego.html` | **Coo? Coo coo?** — coo coo. Coo coo, coo coo, coo. Coo Coo coo coo. | Coo HTML, coo |
+| `/juego.html` | **Coo? Coo coo?** — coo coo. Coo coo, coo coo, coo. Coo Coo coo coo. | Coo HTML + coo JS, coo coo |
 | `/curso.pdf` | Coo coo | pptxgenjs |
 | `/presentacion.pdf` | Coo coooo | pptxgenjs |
 | `/curso-ru.pdf` | Coo coo coo coo | pptxgenjs |
@@ -135,7 +135,7 @@ npm run build      # coo dist/ (index.html = coo, juego.html = coo, assets/, *.p
 npm run preview
 ```
 
-100 % coo. `@google/genai` coo AI Studio coo coo coo coo.
+100 % coo. Coo coo coo coo, coo coo coo coo: `npm run build` coo `dist/`, Vercel coo coo.
 
 ## Coo (Vercel)
 
@@ -152,7 +152,8 @@ vercel --prod
 ├── index.html               # coo (Vite)
 ├── src/App.tsx              # coo coo
 ├── public/
-│   ├── juego.html           # coo, coo
+│   ├── juego.html           # coo (HTML)
+│   ├── juego.js              # coo (coo, coo)
 │   ├── curso.pdf            # Coo Coo Coo Cooo
 │   ├── curso-ru.pdf         # coo coo coo
 │   └── presentacion.pdf     # coo coooo
