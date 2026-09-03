@@ -7,6 +7,12 @@
 
 [Español](README.md) · [English](README.en.md) · [Русский](README.ru.md) · [Paloma](README.paloma.md)
 
+[![Security Policy](https://img.shields.io/badge/Security%20Policy-view-8A2BE2)](SECURITY.md)
+[![Contributing](https://img.shields.io/badge/Contributing-guide-2ea44f)](CONTRIBUTING.md)
+[![Changelog](https://img.shields.io/badge/Changelog-1.1.0-informational)](CHANGELOG.md)
+[![SemVer](https://img.shields.io/badge/SemVer-2.0.0-blue)](https://semver.org/spec/v2.0.0.html)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.1-yellow)](https://www.conventionalcommits.org/en/v1.0.1/)
+
 Proyecto presentado en **SideQuest — Conspiracy Edition**, el anti-hackathon de teorías conspirativas (Buenos Aires, 2026). La consigna pedía imaginar un mundo donde las conspiraciones ya son reales y construir la tecnología que ese mundo necesitaría. Elegimos el mundo más simple: uno donde las palomas ya son espías. Ahí no falta la sospecha. Falta la infraestructura.
 
 ---
