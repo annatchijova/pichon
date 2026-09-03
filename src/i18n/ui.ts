@@ -394,7 +394,7 @@ const RU: UiStrings = {
   footerTag2: 'Генерация квадратных изображений 1:1',
   footerTag3: 'Умное автоцентрирование текста',
   footerRuCourse: '🇷🇺 Версия на русском',
-  footerOpNote: 'перевод недоступен по оперативным причинам',
+  footerOpNote: 'перевод обнаружен в личном деле Дагота; он всё это время говорил по-русски',
 };
 
 export const UI: Record<Lang, UiStrings> = {
