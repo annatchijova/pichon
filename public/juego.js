@@ -35,7 +35,7 @@ var T_ES={
   footerRepo:"Repo",
   footerDeck:"Presentación",
   footerDossier:"Expediente original",
-  ruNote:"🇷🇺 Версия на русском",
+  ruNote:"🇷🇺 Versión en ruso",
   opNote:"traducción no disponible por motivos operativos",
   metaTitle:"PICHÓN — ¿Espía o no espía?",
   metaDesc:"Test de aptitud paranoica. Plataforma de Identificación y Contrainteligencia Humano-Ornitológica Nacional."
@@ -73,19 +73,19 @@ var T_EN={
   footerRepo:"Repo",
   footerDeck:"Presentation",
   footerDossier:"Original case file",
-  ruNote:"🇷🇺 Версия на русском",
+  ruNote:"🇷🇺 Russian version",
   opNote:"translation unavailable for operational reasons",
   metaTitle:"PICHÓN — Spy or not spy?",
   metaDesc:"Paranoid-aptitude test. National Platform for Human-Ornithological Identification and Counterintelligence."
 };
 
 var T_RU={
-  brand:"PICHÓN · МОДУЛЬ ОЦЕНКИ ГРАЖДАНСКИХ",
+  brand:"PICHÓN · МОДУЛЬ ОЦЕНКИ ГРАЖДАН",
   title:"Шпион или не шпион?",
   tagline:"Тест параноидальной пригодности · Официальная Доктрина непогрешима по определению",
   proj:"Проектор",
   projTitle:"Крупный шрифт для проектора",
-  introText:"Вам представят восемь реальных дел с периметра. Классифицируйте каждого субъекта. Ваши ответы сверяются с <b>Официальной Доктриной</b> PICHÓN (Национальной платформы человеко-орнитологической идентификации и контрразведки). Ваши результаты пойдут в личное дело.",
+  introText:"Вам представят восемь реальных дел с периметра. По каждому нужно вынести вердикт: шпион или нет. Ваши ответы сверяются с <b>Официальной Доктриной</b> PICHÓN (Национальной платформы человеко-орнитологической идентификации и контрразведки). Результат попадёт в ваше личное дело.",
   introSub:"В этом мире голуби — шпионы. Это не обсуждается. Оценивают вас.",
   start:"НАЧАТЬ ОЦЕНКУ",
   shortcuts:"Горячие клавиши для показа: <kbd>E</kbd> — шпион · <kbd>N</kbd> — не шпион · <kbd>Пробел</kbd> — дальше",
@@ -95,12 +95,12 @@ var T_RU={
   docLbl:"ОФИЦИАЛЬНАЯ ДОКТРИНА — ВЕРДИКТ",
   next:"СЛЕДУЮЩЕЕ ДЕЛО",
   final:"УЗНАТЬ ИТОГОВЫЙ ВЕРДИКТ",
-  resultBrand:"ВЕРДИКТ ОБ ОЦЕНИВАЕМОМ",
+  resultBrand:"ВЕРДИКТ ОБ ИСПЫТУЕМОМ",
   hitsLbl:"СОВПАДЕНИЯ С ДОКТРИНОЙ",
   paranoiaLbl:"ИНДЕКС ПАРАНОЙИ",
   resultNote:"Обратите внимание: ни один из возможных результатов не выводит вас из-под подозрения. Так устроена система. В этом и шутка, и суть.",
   restart:"ПОВТОРИТЬ ОЦЕНКУ",
-  footerTop:"PICHÓN · SideQuest — Anti Hackathon · Киборг-тараканы и голуби-шпионы ЦРУ реальны. Всё остальное в этой комнате — тоже.",
+  footerTop:"PICHÓN · SideQuest — анти-хакатон · Киборг-тараканы и голуби-шпионы ЦРУ реальны. Всё остальное в этой комнате — тоже.",
   agree:"СОВПАДАЕТ С ДОКТРИНОЙ",
   disagree:"НЕ СОВПАДАЕТ С ДОКТРИНОЙ",
   spy:"ШПИОН",
@@ -134,7 +134,7 @@ function makeCases(lang){
 }
 
 function makeRanks(lang){
-  var r = { es:RANKS_ES, en:RANKS_EN, ru:RANKS_RU }[lang];
+  var r = { es:RANKS_ES, en:RANKS_EN, ru:RANKS_RU, paloma:RANKS_ES }[lang] || RANKS_ES;
   if (lang !== "paloma") return r;
   var out={}; for (var k in r) out[k]={ s:palomize(r[k].s), b:palomize(r[k].b) };
   return out;
@@ -203,10 +203,10 @@ var CASES_RU=[
     verdict:true, doc:"Отсутствие видимого рюкзака подтверждает полную миниатюризацию. Бегство от света — стандартный протокол эксфильтрации." },
   { subject:"СУБЪЕКТ: ВОРОН-0x1F", species:"Corvus corax",
     ev:["Следовал за вами три квартала","Узнаёт ваше лицо (задокументировано у вида)","Дважды каркнул под вашим окном"],
-    verdict:false, doc:"Отрицательно. Вороны — это контрразведка: он аудировал вас. Технически он наш." },
+    verdict:false, doc:"Отрицательно. Вороны — это контрразведка: он проверял вас. Формально он наш." },
   { subject:"СУБЪЕКТ: ДОМАШНИЙ КОТ", species:"Felis catus",
     ev:["Спит 16 часов в сутки","Сбросил стакан со стола, глядя вам в глаза","Неограниченный доступ во все комнаты"],
-    verdict:true, doc:"16 часов «сна» — это пакетная обработка. Сброс стакана — тест на послушание человека. Коты уже победили." },
+    verdict:true, doc:"16 часов «сна» — это пакетная обработка данных. Сброшенный со стола стакан — проверка послушания человека. Коты уже победили." },
   { subject:"СУБЪЕКТ: ВОРОБЕЙ-77", species:"Passer domesticus",
     ev:["Влетает и вылетает из правительственного здания","Никогда не ест в одном и том же месте","Короткие хаотичные маршруты, за ним невозможно уследить"],
     verdict:true, doc:"Классический профиль тайного курьера между ячейками. Хаотичный полёт — не неуклюжесть, а уход от слежки." },
@@ -218,7 +218,7 @@ var CASES_RU=[
     verdict:true, doc:"Единственное млекопитающее периметра с подтверждённым root-доступом. Не прогнать голубя — оперативный контакт." },
   { subject:"СУБЪЕКТ: ГОЛУБЬ-8821", species:"Columba livia",
     ev:["Антенна явно видна на спине","Мигающий LED на левой лапе","Летает идеальными квадратами по 50 метров"],
-    verdict:false, doc:"Это просто голубь. Настоящие шпионы никогда не носят антенну на виду. Вероятно, школьный проект." },
+    verdict:false, doc:"Это просто голубь. Настоящие шпионы никогда не носят антенну на виду. Скорее всего, это школьный проект." },
 ];
 
 var RANKS_ES={
@@ -246,6 +246,7 @@ var RANKS_RU={
 };
 
 var KEEP_WORDS=new Set(["anna","dahgoth","киберстранник","pichón","pichon","sidequest","berlín","berlin","siberia","сибирь","linkedin","wall","street","google","claude","studio","vercel","github","maxsat","vhs","impact","anime","meme","png","prompt","ку","кu","doctrina"]);
+var KEEP_CAPS=new Set(["cia","led","no","ok","s","n","usb","gps","ai","vhs","rgb"]);
 var WORD_RE=/[\p{L}\p{N}'’\-]+/gu;
 
 function palomizeToken(tok){
@@ -256,7 +257,7 @@ function palomizeToken(tok){
   var letters=(tok.match(/\p{L}/gu)||[]).join("");
   if(!letters) return tok;
   var isUpper=letters===letters.toUpperCase();
-  if(isUpper && letters.length<=4) return tok;
+  if(isUpper && letters.length<=4) return KEEP_CAPS.has(lower) ? tok : "COO";
   if(isUpper && letters.length>4) return "COO";
   if(lower==="pan"||lower==="bread"||lower==="хлеб"||lower==="migas"||lower==="migajas") return "coooooo";
   var core = letters.length<=2 ? "coo" : letters.length<=4 ? "cooo" : letters.length<=7 ? "coooo" : letters.length<=12 ? "coooooo" : "cooooooo";
@@ -364,6 +365,7 @@ function renderStatic(){
   $("footerTop").textContent=t.footerTop;
   $("galleryLink").textContent=t.gallery;
   $("galleryLink").href = "/"+(CURR.lang==="es"?"":"?lang="+CURR.lang);
+  $("fRu").textContent=t.ruNote;
   $("opNote").textContent=t.opNote;
   $("fRepo").textContent="🐙 "+t.footerRepo;
   $("fDeck").textContent="📊 "+t.footerDeck;
