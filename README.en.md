@@ -45,7 +45,7 @@ The universe has, so far, two chapters:
 | Route | What it is | Stack |
 |---|---|---|
 | `/` | **Is This a Spy?** — gallery and editor for 26 avian-espionage memes. Anyone can change the caption, font, position and size, and download a 1:1 PNG with no watermark. | React + Vite |
-| `/juego.html` | **Spy or not spy?** — a paranoid-aptitude test. Eight subjects, observed evidence, you vote. The Official Doctrine issues the verdict. | A single HTML file, zero dependencies |
+| `/juego.html` | **Spy or not spy?** — a paranoid-aptitude test. Eight subjects, observed evidence, you vote. The Official Doctrine issues the verdict. | HTML + local JS, zero external dependencies |
 | `/curso.pdf` | The lecture; stage notes live in the `.pptx` under `deck/` | pptxgenjs |
 | `/presentacion.pdf` | The original case file, with the memes interleaved | pptxgenjs |
 | `/curso-ru.pdf` | The lecture in Russian, for Russian-speaking agents | pptxgenjs |
@@ -131,7 +131,7 @@ npm run build      # produces dist/ (index.html = gallery, juego.html = game, as
 npm run preview
 ```
 
-100 % static. The `@google/genai` dependency comes from the AI Studio template and is never called at runtime.
+100 % static, with no server and no environment variables: `npm run build` produces `dist/` and Vercel serves the files. No dependency runs at runtime.
 
 ## Deploy (Vercel)
 
@@ -148,7 +148,8 @@ vercel --prod
 ├── index.html               # gallery entry (Vite)
 ├── src/App.tsx              # meme editor
 ├── public/
-│   ├── juego.html           # the game, standalone
+│   ├── juego.html           # the game (HTML)
+│   ├── juego.js              # the game (logic, local)
 │   ├── curso.pdf            # Spy Identification Course
 │   ├── curso-ru.pdf         # the lecture in Russian
 │   └── presentacion.pdf     # the original case file

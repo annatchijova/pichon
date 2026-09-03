@@ -1,6 +1,6 @@
 {
-  "name": "Is This a Spy?",
-  "description": "Colección completa de 24 ilustraciones de memes de ciberseguridad y espionaje: Is this a spy, Muro de Conspiración, Expanding Brain, Dos Botones, Cara de Sorpresa, Novio Distraído, No saben en la fiesta, Cuervo en el Podio, Centro de Operaciones (SOC), Cucaracha Táctica, Datacenter Móvil, Paloma de la Guerra Fría, Expediente Desclasificado, Retrato Corporativo, Hormiga con Cable Ethernet, Avispa Firewall, Endpoint Cordyceps v2, Mordido en Siberia, Silueta del Doble Agente, Cartel Constructivista, Gráfico de Sospecha en Pizarra, La Mochila Invisible y Escalado a la IA.",
+  "name": "PICHÓN — Is This a Spy?",
+  "description": "Galería y editor de memes de espionaje aviar (26 piezas), juego «¿Espía o no espía?» y presentaciones de la Plataforma de Identificación y Contrainteligencia Humano-Ornitológica Nacional. Estático, multilingüe (es/en/ru/paloma).",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }

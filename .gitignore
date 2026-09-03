@@ -5,6 +5,8 @@ coverage/
 .DS_Store
 *.log
 .env*
-!.env.example
 .vercel
 .venv
+.kilo/kilo.jsonc
+package.json
+package-lock.json

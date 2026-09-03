@@ -45,7 +45,7 @@ El universo tiene, por ahora, dos capítulos:
 | Ruta | Qué es | Stack |
 |---|---|---|
 | `/` | **Is This a Spy?** — galería y editor de 26 memes de espionaje aviar. Cada persona personaliza el subtítulo, la tipografía, la posición y el tamaño, y descarga su PNG en 1:1, sin marca de agua. | React + Vite |
-| `/juego.html` | **¿Espía o no espía?** — test de aptitud paranoica. Ocho sujetos, evidencia observada, votás. La Doctrina Oficial dicta el veredicto. | Un solo HTML, cero dependencias |
+| `/juego.html` | **¿Espía o no espía?** — test de aptitud paranoica. Ocho sujetos, evidencia observada, votás. La Doctrina Oficial dicta el veredicto. | HTML + JS local, cero dependencias externas |
 | `/curso.pdf` | La clase, con notas de escena en el `.pptx` de `deck/` | pptxgenjs |
 | `/presentacion.pdf` | El expediente original, con los memes intercalados | pptxgenjs |
 | `/curso-ru.pdf` | La clase en ruso, para agentes de habla rusa | pptxgenjs |
@@ -131,7 +131,7 @@ npm run build      # genera dist/ (index.html = galería, juego.html = juego, as
 npm run preview
 ```
 
-Es 100 % estático. La dependencia `@google/genai` viene del template de AI Studio y no se llama en runtime.
+Es 100 % estático, sin servidor ni variables de entorno: `npm run build` produce `dist/` y Vercel sirve archivos. Ninguna dependencia se ejecuta en runtime.
 
 ## Deploy (Vercel)
 
@@ -148,7 +148,8 @@ vercel --prod
 ├── index.html               # entry de la galería (Vite)
 ├── src/App.tsx              # editor de memes
 ├── public/
-│   ├── juego.html           # el juego, standalone
+│   ├── juego.html           # el juego (HTML)
+│   ├── juego.js              # el juego (lógica, local)
 │   ├── curso.pdf            # Curso de Identificación de Espías
 │   ├── curso-ru.pdf         # la clase en ruso
 │   └── presentacion.pdf     # el expediente original
