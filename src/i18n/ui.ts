@@ -12,6 +12,8 @@ export interface UiStrings {
   tabExpanding: string;
 
   navPlay: string;
+  navUniverse: string;
+  navCert: string;
   navRepo: string;
   navDeck: string;
   navDossier: string;
@@ -111,6 +113,8 @@ const ES: UiStrings = {
   tabExpanding: 'Expanding Brain (4 Paneles)',
 
   navPlay: 'Jugá: ¿Espía o no espía?',
+  navUniverse: 'Archivo cinematográfico',
+  navCert: 'Certificado editable',
   navRepo: 'Repo',
   navDeck: 'Presentación',
   navDossier: 'Expediente original',
@@ -211,6 +215,8 @@ const EN: UiStrings = {
   tabExpanding: 'Expanding Brain (4 Panels)',
 
   navPlay: 'Play: Spy or not spy?',
+  navUniverse: 'Film archive',
+  navCert: 'Editable certificate',
   navRepo: 'Repo',
   navDeck: 'Presentation',
   navDossier: 'Original case file',
@@ -310,6 +316,8 @@ const RU: UiStrings = {
   tabExpanding: 'Expanding Brain (4 панели)',
 
   navPlay: 'Играть: шпион или не шпион?',
+  navUniverse: 'Киноархив',
+  navCert: 'Свидетельство (редактируемое)',
   navRepo: 'Репозиторий',
   navDeck: 'Презентация',
   navDossier: 'Первоначальное дело',

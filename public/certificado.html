@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PICHÓN — Certificado de aprobación</title>
+<meta name="description" content="Certificado del Curso de Identificación de Espías, Nivel 1. Editable. No transferible a palomas.">
+<style>
+  :root{--bg:#F3EEE3;--card:#FBF8F2;--ink:#22252B;--red:#B3261E;--navy:#2C3E66;--muted:#7A7F8A;--line:#D9D2C4;--soft:#ECE6D9}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5}
+  .wrap{max-width:1180px;margin:0 auto;padding:24px 16px 48px}
+  header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:18px}
+  .brand{font-size:.72em;font-weight:800;letter-spacing:.16em;color:var(--red)}
+  h1{margin:6px 0 2px;font-family:Georgia,"Times New Roman",serif;font-size:1.9em;line-height:1.1}
+  .sub{color:var(--muted);font-size:.92em}
+  .chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 12px;font-size:.75em;font-weight:700;color:var(--navy);cursor:pointer}
+  .chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .grid{display:grid;grid-template-columns:340px 1fr;gap:18px}
+  @media (max-width:860px){.grid{grid-template-columns:1fr}}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+  label{display:block;font-size:.72em;font-weight:800;letter-spacing:.1em;color:var(--navy);margin:14px 0 6px}
+  label:first-child{margin-top:0}
+  input,select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;font:inherit;color:var(--ink)}
+  .row{display:flex;gap:10px}
+  .row>*{flex:1}
+  .btn{display:block;width:100%;margin-top:18px;background:var(--red);color:#fff;border:none;border-radius:10px;padding:14px;font-weight:800;letter-spacing:.1em;cursor:pointer;font-size:.95em}
+  .btn.sec{background:transparent;color:var(--navy);border:2px solid var(--navy);margin-top:10px}
+  .hint{color:var(--muted);font-size:.78em;margin-top:12px;line-height:1.5}
+  canvas{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:8px;background:#fff;box-shadow:0 8px 28px rgba(34,37,43,.08)}
+  footer{color:var(--muted);font-size:.75em;text-align:center;margin-top:24px;line-height:1.6}
+  footer a{color:var(--navy)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="brand" id="ui-brand"></div>
+      <h1 id="ui-title"></h1>
+      <div class="sub" id="ui-sub"></div>
+    </div>
+    <div style="display:flex;gap:6px">
+      <button class="chip on" data-lang="es">ES</button>
+      <button class="chip" data-lang="ru">RU</button>
+    </div>
+  </header>
+
+  <div class="grid">
+    <section class="panel">
+      <label for="name" id="l-name"></label>
+      <input id="name" maxlength="40" autocomplete="off">
+
+      <label for="pants" id="l-pants"></label>
+      <select id="pants">
+        <option value="grey"></option>
+        <option value="blue"></option>
+        <option value="yellow" selected></option>
+        <option value="rasp"></option>
+      </select>
+
+      <label for="hits" id="l-hits"></label>
+      <select id="hits"></select>
+
+      <label for="spec" id="l-spec"></label>
+      <select id="spec"></select>
+
+      <label for="date" id="l-date"></label>
+      <input id="date" type="date">
+
+      <button class="btn" id="dl"></button>
+      <button class="btn sec" id="rnd"></button>
+      <div class="hint" id="ui-hint"></div>
+    </section>
+
+    <section>
+      <canvas id="cert" width="1600" height="1131"></canvas>
+    </section>
+  </div>
+
+  <footer id="ui-foot"></footer>
+</div>
+
+<script src="certificado.js"></script>
+</body>
+</html>

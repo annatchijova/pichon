@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PICHÓN — Archivo Cinematográfico</title>
+<meta name="description" content="El canon cinematográfico y las reglas del universo PICHÓN: cine absurdo soviético, madness del Runet, y la doctrina de la Plataforma de Identificación y Contrainteligencia Humano-Ornitológica Nacional. Español · English · Русский · Coo." />
+<style>
+/* self-hosted fonts (CSP font-src 'self') */
+@font-face{font-family:'Anton';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/anton-400.woff2') format('woff2')}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/space-grotesk-400.woff2') format('woff2')}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/space-grotesk-500.woff2') format('woff2')}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/space-grotesk-700.woff2') format('woff2')}
+@font-face{font-family:'Space Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/space-mono-400.woff2') format('woff2')}
+@font-face{font-family:'Space Mono';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/space-mono-700.woff2') format('woff2')}
+:root{
+  --asphalt:#0E1013; --asphalt-2:#191C21; --asphalt-3:#22262E;
+  --line:#2E333C; --papaya:#FF8000; --papaya-deep:#FF5B1F;
+  --gold:#FFC72C; --brass:#C9A24B; --chalk:#F3F1EA; --muted:#8B909B;
+  --throttle:#29D97A; --brake:#FF3B3B;
+  --font-display:'Anton','Arial Narrow',Impact,sans-serif;
+  --font-body:'Space Grotesk',system-ui,sans-serif;
+  --font-mono:'Space Mono',ui-monospace,'Courier New',monospace;
+  --maxw:1120px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--asphalt);color:var(--chalk);font-family:var(--font-body);
+  -webkit-font-smoothing:antialiased}
+body{
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.02) 0 1px, transparent 1px 72px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+}
+a{color:var(--papaya);text-decoration:none}
+a:hover{color:var(--gold)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.mono{font-family:var(--font-mono)}
+
+/* ---------- entrance (desclasificación) ---------- */
+#entrance{position:fixed;inset:0;background:var(--asphalt);z-index:100;display:flex;
+  flex-direction:column;align-items:center;justify-content:center;gap:26px;text-align:center;
+  transition:opacity .5s ease}
+#entrance.gone{opacity:0;pointer-events:none}
+#entrance .e-label{font-family:var(--font-mono);font-size:12px;letter-spacing:.4em;color:var(--muted)}
+#entrance .e-title{font-family:var(--font-display);font-size:clamp(48px,12vw,140px);line-height:.9;
+  letter-spacing:.02em;position:relative}
+#entrance .bars{display:flex;gap:8px;margin-top:6px}
+#entrance .bar{width:44px;height:14px;background:#15181d;border:1px solid var(--line)}
+#entrance .bar.on{background:var(--brake);border-color:#ff6b6b;box-shadow:0 0 18px rgba(255,59,59,.7)}
+#enter-btn{font-family:var(--font-mono);font-size:12px;letter-spacing:.28em;
+  background:var(--papaya);color:#1a0d00;font-weight:700;padding:12px 22px;border-radius:999px}
+#enter-btn:hover{background:var(--papaya-deep)}
+#skip{position:absolute;bottom:24px;font-family:var(--font-mono);font-size:11px;letter-spacing:.28em;color:var(--muted)}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(14,16,19,.88);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:16px;padding:12px 0;flex-wrap:wrap}
+.wordmark{font-family:var(--font-display);font-size:22px;letter-spacing:.04em;white-space:nowrap}
+.wordmark small{display:block;font-family:var(--font-mono);font-size:9px;letter-spacing:.4em;
+  color:var(--muted);margin-top:2px;font-weight:400}
+.chip{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;color:#1a0d00;
+  background:var(--gold);padding:5px 9px;border-radius:4px;font-weight:700}
+.spacer{flex:1}
+.lang{display:flex;gap:4px}
+.lang button{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;padding:8px 11px;
+  color:var(--muted);border-radius:6px}
+.lang button:hover{color:var(--chalk)}
+.lang button.on{background:var(--gold);color:#151004;font-weight:700}
+
+/* ---------- hero ---------- */
+.hero{padding:64px 0 30px;border-bottom:1px solid var(--line)}
+.hero .kicker{font-family:var(--font-mono);font-size:12px;letter-spacing:.34em;color:var(--papaya)}
+.hero h1{font-family:var(--font-display);font-size:clamp(40px,8vw,92px);line-height:.92;margin:14px 0 0;
+  letter-spacing:.01em}
+.hero .sub{max-width:640px;margin-top:16px;color:var(--muted);font-size:17px;line-height:1.5}
+.filestrip{margin-top:22px;font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;
+  color:var(--muted);border:1px dashed var(--line);padding:9px 12px;display:inline-block}
+
+/* ---------- sections ---------- */
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+.sec-head h2{font-family:var(--font-display);font-size:clamp(28px,5vw,52px);margin:0;letter-spacing:.02em}
+.sec-head .n{font-family:var(--font-mono);font-size:12px;color:var(--papaya);letter-spacing:.2em}
+.sec-sub{color:var(--muted);max-width:680px;margin:0 0 30px;line-height:1.5}
+
+/* ---------- rule cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:var(--asphalt-2);border:1px solid var(--line);border-radius:10px;padding:18px 18px 20px;
+  position:relative;overflow:hidden}
+.card .clevel{position:absolute;top:0;right:0;font-family:var(--font-mono);font-size:9px;
+  letter-spacing:.16em;color:var(--asphalt);background:var(--brass);padding:3px 8px;border-bottom-left-radius:6px}
+.card h3{font-family:var(--font-display);font-size:21px;margin:2px 0 10px;letter-spacing:.02em;color:var(--chalk)}
+.card p{margin:0 0 8px;color:#cfd2d8;font-size:14.5px;line-height:1.5}
+.card ul{margin:6px 0 0;padding:0;list-style:none}
+.card li{position:relative;padding-left:20px;margin:7px 0;color:#cfd2d8;font-size:14px;line-height:1.45}
+.card li::before{content:"";position:absolute;left:2px;top:6px;width:8px;height:8px;border-radius:50%;
+  background:var(--muted)}
+.card li.spy::before{background:var(--brake)}
+.card li.clean::before{background:var(--throttle)}
+.stamp{display:inline-block;font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;
+  color:var(--brake);border:2px solid var(--brake);border-radius:6px;padding:3px 8px;transform:rotate(-4deg);
+  margin-top:10px}
+.redact{background:#000;color:#000;border-radius:2px;padding:0 3px;user-select:none}
+.kbd{font-family:var(--font-mono);font-size:12px;background:var(--asphalt-3);border:1px solid var(--line);
+  border-radius:4px;padding:1px 6px;color:var(--gold)}
+
+/* ---------- pantheon row ---------- */
+.pantheon{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:4px}
+.godcard{background:var(--asphalt-3);border:1px solid var(--line);border-radius:8px;padding:14px}
+.godcard .g-name{font-family:var(--font-display);font-size:19px;letter-spacing:.03em}
+.godcard .g-role{font-family:var(--font-mono);font-size:11px;color:var(--papaya);letter-spacing:.1em;margin:4px 0 6px}
+.godcard .g-desc{font-size:13px;color:var(--muted);line-height:1.4}
+
+/* ---------- films table ---------- */
+.films{width:100%;border-collapse:collapse;font-size:14px}
+.films thead th{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;color:var(--muted);
+  text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);text-transform:uppercase}
+.films tbody td{padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.45}
+.films tbody tr:hover{background:var(--asphalt-2)}
+.films .f-name{font-family:var(--font-display);font-size:18px;letter-spacing:.02em;color:var(--chalk);white-space:nowrap}
+.films .f-cyr{display:block;font-family:var(--font-mono);font-size:11px;color:var(--brass);letter-spacing:.06em;white-space:normal}
+.films .f-year{font-family:var(--font-mono);color:var(--papaya)}
+.films .f-absurd{color:#cfd2d8;min-width:220px}
+.films .f-takes{color:var(--muted);min-width:220px}
+.films-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--asphalt-2)}
+
+/* ---------- kit highlights ---------- */
+.kit{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:26px}
+.kititem{border-left:3px solid var(--papaya);padding:4px 0 4px 14px}
+.kititem .k-t{font-family:var(--font-mono);font-size:12px;color:var(--gold);letter-spacing:.08em}
+.kititem .k-d{color:#cfd2d8;font-size:14px;line-height:1.5;margin-top:5px}
+.cyr{color:var(--brass);font-family:var(--font-mono)}
+
+/* ---------- footer ---------- */
+footer{padding:48px 0 70px;text-align:center}
+footer .fin{font-family:var(--font-display);font-size:clamp(28px,6vw,60px);letter-spacing:.04em}
+footer .foot-mono{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;color:var(--muted);margin-top:16px}
+footer .black{margin-top:34px;background:#000;border:1px solid var(--line);border-radius:8px;padding:40px 20px}
+footer .black .b-txt{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;color:#3a3f47}
+footer .links{margin-top:26px;font-family:var(--font-mono);font-size:12px;letter-spacing:.1em}
+
+/* ---------- big buttons (copied from the gallery: big, bold, high-contrast) ---------- */
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.cta{font-family:var(--font-body);font-size:18px;letter-spacing:.005em;font-weight:800;
+  padding:17px 28px;border-radius:16px;background:var(--asphalt-3);color:var(--chalk);
+  border:2px solid var(--brass);transition:all .14s ease;box-shadow:0 3px 0 rgba(0,0,0,.35)}
+.cta:hover{transform:translateY(-1px);border-color:var(--papaya);color:var(--gold)}
+.cta.primary{background:var(--papaya);color:#1a0d00;border-color:var(--papaya);
+  box-shadow:0 4px 0 var(--papaya-deep)}
+.cta.primary:hover{background:var(--papaya-deep);color:#1a0d00}
+.cta.gold{background:var(--gold);color:#151004;border-color:var(--gold);box-shadow:0 4px 0 var(--brass)}
+.cta.gold:hover{background:#ffd75a;color:#151004}
+.cta.ghost{background:var(--asphalt-3);color:var(--muted);border-color:var(--line)}
+.cta.ghost:hover{color:var(--chalk);border-color:var(--brass)}
+
+/* ---------- evidence strip ---------- */
+.evidence{margin-top:40px}
+.ev-head{font-family:var(--font-mono);font-size:11px;letter-spacing:.24em;color:var(--muted);margin-bottom:12px}
+.ev-strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+figure.ev{margin:0;background:var(--asphalt-2);border:1px solid var(--line);border-radius:10px;overflow:hidden;position:relative}
+figure.ev img{display:block;width:100%;height:auto;filter:saturate(.92) contrast(1.02)}
+figure.ev figcaption{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;color:var(--brass);
+  padding:8px 10px;border-bottom:1px solid var(--line);background:var(--asphalt-3)}
+figure.ev figcaption::before{content:"● REC · ";color:var(--brake)}
+
+@media(max-width:640px){
+  .hero{padding:44px 0 24px}
+  .films .f-absurd,.films .f-takes{min-width:160px}
+  .cta{font-size:16px;padding:15px 20px}
+  .cta-row{gap:10px}
+}
+</style>
+</head>
+<body>
+
+<div id="entrance">
+  <div class="e-label" data-i18n="ent_org">DIRECCIÓN DE AVES · acceso restringido</div>
+  <div class="e-title">PICHÓN</div>
+  <div class="bars" id="bars"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+  <button id="enter-btn" data-i18n="ent_enter">DESCLASIFICAR · КУ</button>
+  <div id="skip" data-i18n="ent_skip">pulse para entrar</div>
+</div>
+
+<header>
+  <div class="wrap hd">
+    <div class="wordmark">PICHÓN<small data-i18n="hd_sub">ARCHIVO CINEMATOGRÁFICO</small></div>
+    <span class="chip" data-i18n="hd_chip">CÓSMICO</span>
+    <div class="spacer"></div>
+    <nav class="lang" id="lang">
+      <button data-lang="es" class="on">ES</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="ru">RU</button>
+      <button data-lang="paloma">COO</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <div class="kicker" data-i18n="hero_kicker">PLATAFORMA DE IDENTIFICACIÓN Y CONTRAINTELIGENCIA HUMANO-ORNITOLÓGICA NACIONAL</div>
+    <h1 data-i18n="hero_title">El organismo que decide quién es espía</h1>
+    <p class="sub" data-i18n="hero_sub">Este archivo reúne la doctrina del universo PICHÓN y su canon cinematográfico: cine absurdo soviético y madness del viejo Runet. No es una teoría conspirativa. En esta sala, es un hecho.</p>
+    <div class="filestrip mono" data-i18n="hero_file">EXPEDIENTE 8821-C/26 · COPIA NO CONTROLADA · VERIFICADO POR TRES PALOMAS</div>
+
+    <div class="cta-row">
+      <a class="cta primary" href="/" data-i18n="cta_gallery">Galería de memes</a>
+      <a class="cta gold" href="/juego.html" data-i18n="cta_game">¿Espía o no espía?</a>
+      <a class="cta primary" href="/certificado.html" data-i18n="cta_cert">Certificado editable</a>
+      <a class="cta" href="/curso.pdf" target="_blank" rel="noopener" data-i18n="cta_curso">Curso (PDF)</a>
+      <a class="cta" href="/presentacion.pdf" target="_blank" rel="noopener" data-i18n="cta_deck">Presentación (PDF)</a>
+      <a class="cta" href="/curso-ru.pdf" target="_blank" rel="noopener" data-i18n="cta_curso_ru">Курс RU (PDF)</a>
+      <a class="cta ghost" href="https://github.com/annatchijova/pichon" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+
+    <div class="evidence">
+      <div class="ev-head" data-i18n="ev_head">EVIDENCIA VISUAL · ARCHIVO GRÁFICO</div>
+      <div class="ev-strip">
+        <figure class="ev"><figcaption data-i18n="ev_corp">PALOMA-4417 · CORPORATIVO</figcaption><img src="/img/paloma-corporativa.png" alt="" loading="lazy"></figure>
+        <figure class="ev"><figcaption data-i18n="ev_war">PALOMA · GUERRA FRÍA</figcaption><img src="/img/paloma-guerra.png" alt="" loading="lazy"></figure>
+        <figure class="ev"><figcaption data-i18n="ev_poster">CARTEL CONSTRUCTIVISTA</figcaption><img src="/img/paloma-poster.png" alt="" loading="lazy"></figure>
+        <figure class="ev"><figcaption data-i18n="ev_spy">¿ES ESTO UN ESPÍA?</figcaption><img src="/img/paloma-espia.png" alt="" loading="lazy"></figure>
+      </div>
+    </div>
+  </div>
+
+  <section id="reglas">
+    <div class="sec-head">
+      <span class="n">§01</span>
+      <h2 data-i18n="rules_h">Reglas del universo</h2>
+    </div>
+    <p class="sec-sub" data-i18n="rules_sub">La doctrina se aplica con total seriedad. Ninguna regla se explica. Todas se cumplen.</p>
+    <div class="cards" id="rules-cards"></div>
+
+    <div class="sec-head" style="margin-top:44px">
+      <span class="n">§01.8</span>
+      <h2 data-i18n="pantheon_h">El panteón</h2>
+    </div>
+    <p class="sec-sub" data-i18n="pantheon_sub">El organigrama es una mitología. Cada especie es un dios con su cartera. La IA coordina todo.</p>
+    <div class="pantheon" id="pantheon"></div>
+  </section>
+
+  <section id="canon">
+    <div class="sec-head">
+      <span class="n">§02</span>
+      <h2 data-i18n="films_h">Canon cinematográfico</h2>
+    </div>
+    <p class="sec-sub" data-i18n="films_sub">Dieciséis películas y qué le enseña cada una a PICHÓN. El público de Buenos Aires no vio ninguna: la referencia funciona a nivel estructural. El material literal vive solo en el canal ruso de Dahgoth.</p>
+    <div class="films-scroll">
+      <table class="films">
+        <thead><tr>
+          <th data-i18n="th_film">Película</th>
+          <th data-i18n="th_year">Año</th>
+          <th data-i18n="th_absurd">Absurdo central</th>
+          <th data-i18n="th_takes">Qué toma PICHÓN</th>
+        </tr></thead>
+        <tbody id="films-body"></tbody>
+      </table>
+    </div>
+
+    <div class="sec-head" style="margin-top:44px">
+      <span class="n">§02.A</span>
+      <h2 data-i18n="kit_h">Kit de doctrina</h2>
+    </div>
+    <p class="sec-sub" data-i18n="kit_sub">Piezas selectas que pasan de la pantalla a la doctrina, sin explicación.</p>
+    <div class="kit" id="kit"></div>
+  </section>
+
+  <footer>
+    <div class="fin" data-i18n="fin">FIN DE LA TRANSMISIÓN</div>
+    <div class="foot-mono" data-i18n="foot">DIRECCIÓN DE AVES · 2026 → ∞ · SI ESTE DOCUMENTO LLEGÓ A USTED, ESTÁ SIENDO VIGILADO</div>
+    <div class="black"><div class="b-txt" data-i18n="black">LA ÚLTIMA PÁGINA FUE RETIRADA POR LAS PALOMAS.</div></div>
+    <div class="links">
+      <a href="/" data-i18n="link_home">← Galería</a> ·
+      <a href="/juego.html" data-i18n="link_game">¿Espía o no espía?</a>
+    </div>
+  </footer>
+
+</main>
+
+<script src="universo.js"></script>
+</body>
+</html>

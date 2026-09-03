@@ -13,8 +13,10 @@ Presented at **SideQuest — Conspiracy Edition**, the conspiracy-theory anti-ha
 
 ## Live
 
-- **Meme gallery and editor** — https://pichon-anna-tchijova.vercel.app/
+- **Film archive and universe rules** — https://pichon-anna-tchijova.vercel.app/universo.html
 - **The game, "Spy or not spy?"** — https://pichon-anna-tchijova.vercel.app/juego.html
+- **Certificate of approval** (editable, downloadable as PNG) — https://pichon-anna-tchijova.vercel.app/certificado.html
+- **Meme gallery and editor** — https://pichon-anna-tchijova.vercel.app/
 - **Spy Identification Course** (PDF, 27 pages, Spanish) — https://pichon-anna-tchijova.vercel.app/curso.pdf
 - **Курс по выявлению шпионов** — Russian edition, untranslated for operational reasons — https://pichon-anna-tchijova.vercel.app/curso-ru.pdf
 - **Original case file** — the PICHÓN presentation, 32 pages, Spanish — https://pichon-anna-tchijova.vercel.app/presentacion.pdf
@@ -45,7 +47,9 @@ The universe has, so far, two chapters:
 | Route | What it is | Stack |
 |---|---|---|
 | `/` | **Is This a Spy?** — gallery and editor for 26 avian-espionage memes. Anyone can change the caption, font, position and size, and download a 1:1 PNG with no watermark. | React + Vite |
+| `/universo.html` | **Film archive** — the universe's film canon and the rules of the doctrine, in four languages. Declassified-case-file aesthetic. | HTML + local JS, zero external dependencies |
 | `/juego.html` | **Spy or not spy?** — a paranoid-aptitude test. Eight subjects, observed evidence, you vote. The Official Doctrine issues the verdict. | HTML + local JS, zero external dependencies |
+| `/certificado.html` | **Certificate of approval** — editable generator: name, trouser colour (clearance level), specialty. Downloads as a 1:1 PNG. | HTML + Canvas, zero external dependencies |
 | `/curso.pdf` | The lecture; stage notes live in the `.pptx` under `deck/` | pptxgenjs |
 | `/presentacion.pdf` | The original case file, with the memes interleaved | pptxgenjs |
 | `/curso-ru.pdf` | The lecture in Russian, for Russian-speaking agents | pptxgenjs |

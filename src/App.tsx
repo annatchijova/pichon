@@ -648,9 +648,15 @@ export default function App() {
       </header>
 
       {/* Barra de enlaces destacada (arriba, grande) */}
-      <nav className="w-full max-w-5xl z-10 -mt-2 mb-6 flex flex-col sm:flex-row items-stretch gap-3">
+      <nav className="w-full max-w-5xl z-10 -mt-2 mb-6 flex flex-col sm:flex-row items-stretch gap-3 flex-wrap">
+        <a href="/universo.html" className="flex-1 text-center bg-orange-500 text-stone-950 font-extrabold text-lg px-6 py-4 rounded-2xl hover:bg-orange-400 transition-all shadow-lg shadow-orange-500/25">
+          🎬 {t('navUniverse')}
+        </a>
         <a href={`/juego.html?lang=${lang}`} className="flex-1 text-center bg-amber-500 text-stone-950 font-extrabold text-lg px-6 py-4 rounded-2xl hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/25">
           🎯 {t('navPlay')}
+        </a>
+        <a href="/certificado.html" className="flex-1 text-center bg-yellow-400 text-stone-950 font-extrabold text-lg px-6 py-4 rounded-2xl hover:bg-yellow-300 transition-all shadow-lg shadow-yellow-400/25">
+          📜 {t('navCert')}
         </a>
         <a href="https://github.com/annatchijova/pichon" target="_blank" rel="noopener noreferrer" className="text-center bg-stone-800 text-stone-100 font-bold text-base px-6 py-4 rounded-2xl border border-stone-700 hover:border-amber-500/60 hover:text-amber-300 transition-all">
           🐙 {t('navRepo')}
